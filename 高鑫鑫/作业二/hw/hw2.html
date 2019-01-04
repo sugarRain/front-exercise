@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>html5/css3作业</title>
+  <style>
+    .hw2-nav {
+      width: 100%;
+      height: 350px;
+      padding: 20px 0;
+      background-color: #888;
+    }
+    .hw2-nav-box {
+      width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      background-color: #d1d1d1;
+      display: flex;
+      /* align-items: center; */
+      justify-content: space-around;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .hw2-nav-items {
+      flex: 1;
+      background-color: pink;
+      margin: 10px;
+      border-radius: 6px;
+      transition: all 0.6s ease-in-out;
+    }
+    .hw2-nav-items:hover {
+      animation-name: enlarge;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-direction: initial;
+      animation-play-state: running;
+      animation-fill-mode: forwards;
+      transition: all 0.6s ease-in-out;
+    }
+    @keyframes enlarge
+    {
+      100% {
+        transform:scale(1.05);
+      }
+    }
+    .hw2-content {
+      width: 100%;
+      height: 300px;
+      padding: 16px 0;
+      background-color: #fff222;
+    }
+    .hw2-cont {
+      width: 1200px;
+      /* height: 100%; */
+      position: relative;
+      margin: 0 auto;
+      /* padding: 10px;
+      overflow-x: scroll; */
+    }
+    .hw2-cont-box {
+      width: 100%;
+      height: 100%;
+      /* margin: 0 auto; */
+      overflow-x: scroll;
+      display: flex;
+      align-items: stretch;
+      background-color: #222;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .hw2-cont-items {
+      min-width: 280px;
+      flex: 1;
+      background-color: pink;
+      margin: 8px;
+      border: 1px solid #d1d1d1;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    .hw2-cont-items:first-child {
+      color: blue;
+    }
+    .hw2-cont-more {
+      min-width: 280px;
+      flex: 1;
+      margin: 8px;
+      box-sizing: border-box;
+      text-align: center;
+      vertical-align: middle;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+    .hw2-cont-more .more-text {
+      color: #fff;
+      text-decoration: none;
+    }
+    .scroll-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      padding: 0 8px;
+      background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+    }
+    .scroll-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0 8px;
+      background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+    }
+  </style>
+</head>
+<body>
+  <div class="hw2-nav">
+    <section class="hw2-nav-box">
+      <article class="hw2-nav-items"></article>
+      <article class="hw2-nav-items"></article>
+      <article class="hw2-nav-items"></article>
+    </section>
+  </div>
+  <div class="hw2-content">
+    <div class="hw2-cont"> 
+      <section class="hw2-cont-box">
+        <article class="hw2-cont-items"></article>
+        <article class="hw2-cont-items"></article>
+        <article class="hw2-cont-items"></article>
+        <article class="hw2-cont-items"></article>
+        <article class="hw2-cont-items">
+          <p>132564677777676767767766677677</p>
+          <p>132564677777676767767766677677</p>
+          <p>132564677777676767767766677677</p>
+          <p>132564677777676766677677677677</p>
+          <p>132564677777676767767766677677</p>
+          <p>132564677777676766677677677677</p>
+        </article>
+        <article class="hw2-cont-items"></article>
+        <article class="hw2-cont-more">
+          <a href="http://www.baidu.com" class="more-text">see more...</a>
+        </article>
+      </section>
+      <div class="scroll-left"></div>
+      <div class="scroll-right"></div>
+    </div>
+  </div>
+  
+</body>
+</html>

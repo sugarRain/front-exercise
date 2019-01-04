@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>flex弹性盒模型</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #div {
+            height: 100px;
+            display: flex;
+        }
+
+        .div1 {
+            width: 20%;
+            background-color: blue;
+            color: white;
+            font-size: 30px;
+            background: url('./背景.jpg') no-repeat;
+            background-size: 100% 100%;
+            margin: 10px;
+        }
+
+
+
+            .div1:hover {
+                margin: 5px;
+            }
+
+        #div2 {
+            display: flex;
+            overflow: auto;
+            margin: 20px;
+        }
+
+        .divContent {
+            min-width: 265px;
+            min-height: 325px;
+            color: black;
+            font-size: 14px;
+            margin: 10px;
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+
+        .divContent1 {
+            margin: 20px,10px,30px,40px;
+            color: black;
+            font-size: 10px;
+        }
+
+        .content {
+            width: 50%;
+            height: 50%;
+            background: rgba(255,255,255,0.5);
+        }
+
+        a:link {
+            color: blue;
+        }
+        /* 未访问的链接 */
+        a:visited {
+            color: gray;
+        }
+        /* 已访问的链接 */
+        a:hover {
+            color: red;
+        }
+        /* 鼠标移动到链接上 */
+        a:active {
+            color: yellow;
+        }
+        /* 选定的链接 */
+
+        .frostedglass-inner:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            filter: blur(15px);
+            background: hsla(0,0%,100%,.3);
+            z-index: -1;
+        }
+
+        .frostedglass-inner {
+            width: 40px;
+            height: 350px;
+            position: absolute;
+            filter: blur(10px);
+            background: hsla(0,0%,100%,.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- 可参考http://www.runoob.com/w3cnote/flex-grammar.html -->
+    <div id="div">
+        <div class="div1">1</div>
+        <div class="div1" style="width:50%">2</div>
+        <div class="div1">3</div>
+    </div>
+    <div>
+        <div id="div2">
+            <div class="divContent">
+                <a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a>
+                <div class="divContent1">
+                    :dizzy: A collection of awesome lists, manuals, blogs, hacks, one-liners, cli/web tools and more. Especially for System and Network Administrators, DevOps, Pentesters or Security Researchers.
+                </div>
+            </div>
+
+            <div class="frostedglass-inner"></div>
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+
+            <div class="divContent"><a href="https://www.baidu.com" target="_blank">trimstray / the-book-of-secret-knowledge</a></div>
+        </div>
+        <div class="content">777777777</div>
+
+    </div>
+
+</body>
+</html>

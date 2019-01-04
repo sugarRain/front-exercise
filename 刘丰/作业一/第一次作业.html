@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度一下，你就知道</title>
+    <style>
+        /*--重置body--*/
+        body {
+            border: 0;
+            margin: 0;
+        }
+
+        /*--重置button的边框--*/
+        input, button {
+            border: 0;
+        }
+
+        li {
+            list-style: none; /* 将默认的列表符号去掉 */
+            padding: 0; /* 将默认的内边距去掉 */
+            margin: 0; /* 将默认的外边距去掉 */
+            float: left; /* 往左浮动 */
+        }
+        /*--上面选项菜单--*/
+        .baidu-hearder {
+            text-align: right;
+            margin-top: 21px;
+            margin-right: 8px;
+            margin-bottom: 50px;
+            font-size: 13px;
+            float: right;
+        }
+
+            .baidu-hearder ul li a {
+                color: #333;
+                font-weight: bold;
+                margin: 0 7px;
+            }
+
+                .baidu-hearder ul li a.set,
+                .baidu-hearder ul li a.login {
+                    font-weight: normal;
+                }
+
+        #nav button {
+            background: #38f;
+            padding: 4px 5px;
+            margin-left: 5px;
+            color: White;
+        }
+
+        #nav a:hover {
+            color: #00C;
+        }
+
+        /*--主要部分--*/
+        .baidu-main {
+            width: 655px;
+            height: 488px;
+            margin: 0 auto;
+        }
+
+            /*--百度一下背景图片--*/
+            .baidu-main .baidu-main-logo {
+                text-align: center;
+                position: relative;
+                 
+            }
+
+            .baidu-main input {
+                border: 1px solid #BBB;
+                width: 540px;
+                height: 33px;
+                padding-left: 5px;
+                margin: 0;
+            }
+
+                .baidu-main input.sub {
+                    width: 100px;
+                    height: 36px;
+                    background: #38f;
+                    color: White;
+                    font-size: 15px;
+                    border: 0;
+                    margin: 0;
+                }
+
+                .baidu-main input.si {
+                    float: left;
+                }
+
+        /*--最底一块--*/
+        .baudu-footer {
+            text-align: center;
+            position: relative;
+            bottom: -350px;
+            font-size: 12px;
+            color: #999;
+        }
+
+            .baudu-footer .setHomePage {
+                font-size: 12px;
+                text-align: center;
+                   margin-top: 20px;
+            }
+
+
+        .setHomePage li a {
+            color: #999;
+            text-decoration: underline;
+            font-size: 12px;
+            margin-left: 25px;
+        }
+
+        .baudu-footer .setHomePage p {
+            color: #666;
+        }
+
+        .mustToRead {
+            margin-top: 13px;
+        }
+
+            .mustToRead li {
+                color: #999;
+                font-size: 12px;
+            }
+
+                .mustToRead li a {
+                    color: #999;
+                    text-decoration: underline;
+                    font-size: 12px;
+                }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <nav class="baidu-hearder">
+                <ul>
+                    <li><a href="">新闻</a></li>
+                    <li><a href="">hao123</a></li>
+                    <li><a href="">地图</a></li>
+                    <li><a href="">视频</a></li>
+                    <li><a href="">贴吧</a></li>
+                    <li><a href="">学术</a></li>
+                    <li><a href="">登陆</a></li>
+                    <li><a href="">设置</a></li>
+                    <li><a href="">更多产品</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="baidu-main">
+            <img src="./images/bd_logo1.png" alt="" class="baidu-main-logo">
+            <div class="baidu-main-search">
+                <input type="text" class="si">
+                <span></span>
+                <input type="button" class="sub" value="百度一下">
+            </div>
+        </main>
+        <footer class="baudu-footer">
+            <div class="baudu-footer-code">
+                <span>百度</span>
+            </div>
+            <ul class="setHomePage">
+                <li><a href="">把百度设置为主页</a></li>
+                <li><a href="">关于百度</a></li>
+                <li><a href="">About Baidu</a></li>
+                <li><a href="">百度推广</a></li>
+            </ul>
+           
+            <ul class="mustToRead">
+                <li>©2018 Baidu <a href=""> 使用百度前必读</a><a href="">意见反馈</a>京ICP证030173号<i></i></li>
+                <li><a href="">京公网安备11000002000001号</a><i></i></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
