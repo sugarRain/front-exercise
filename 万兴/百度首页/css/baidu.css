@@ -1,0 +1,130 @@
+
+a{
+    color: #333;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    margin: 0 20px;
+}
+
+
+header{
+    padding-top: 20px;
+    height: 42px;
+}
+
+header .baidu-hearder{
+    float: right;
+}
+
+header .baidu-hearder ul{
+    list-style: none;
+}
+
+header .baidu-hearder ul li{
+    float: left;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+header .baidu-hearder ul li:last-child{
+    display: inline-block;
+    background: #38f;
+    padding: 5px;
+    margin-top: -5px;
+    margin-left: 25px;
+}
+
+header .baidu-hearder ul li:last-child a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.baidu-main{
+    height: 350px;
+    width: 600px;
+    margin: 0 auto;
+}
+.baidu-main .baidu-main-search{
+    height: 34px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.baidu-main .baidu-main-search .camera{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+    background-image: url("../images/camera.png") ;
+}
+
+.baidu-main .baidu-main-search input[type="text"]{
+    width: 450px;
+    height: 30px;
+    border: none;
+    outline:none;
+    padding-left: 5px;
+}
+
+
+.baidu-main .baidu-main-search input[type="button"]{
+    width: 100px;
+    height: 36px;
+    border: none;
+    background: #3385ff;
+    padding: 1px;
+    margin-top: -1px;
+}
+
+.qrcode{
+    width: 330px;
+    margin: 0 auto;
+    padding-top: 340px;
+    padding-left: 230px;
+    text-align: center;
+}
+
+.qrcode .qrcode_img{
+    width: 60px;
+    height: 60px;
+    background: url("../images/code.png") no-repeat;
+}
+
+.qrcode .qrcode_p{
+    width: 60px;
+    height: 20px;
+    color: #999;
+    line-height: 23px;
+    margin: 3px 0 0;
+}
+
+
+.baidu-footer{
+    /*height: 350px;*/
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.baidu-footer .setHomePage{
+    padding-left: 72px;
+}
+.baidu-footer .setHomePage li,.baidu-footer .mustToRead li{
+    display: inline-block;
+    font: 12px arial;
+    line-height: 22px;
+    color: #999;
+    margin: 0 15px;
+}
+
+.baidu-footer .setHomePage li>a,.baidu-footer .mustToRead li>a{
+    color: #999;
+}
