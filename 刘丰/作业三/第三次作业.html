@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function GenerateCode() {
+            var codeResult = "";
+            var codeElementArray = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+            for (var i = 0; i < 4; i++) {
+                codeResult += codeElementArray[Math.floor(Math.random() * 52)];
+            }
+            alert(codeResult);
+        }
+
+        function RemoveDuplicates() {
+            var array = new Array(0, "0", 1, "0", 0, "1", 2, 2, "1", 3, 4, 5);
+            RemoveDuplicates1(array);
+            array = new Array(0, "0", 1, "0", 0, "1", 2, 2, "1", 3, 4, 5);
+            RemoveDuplicates2(array);
+            array = new Array(0, "0", 1, "0", 0, "1", 2, 2, "1", 3, 4, 5);
+            RemoveDuplicates3(array);
+        }
+        function RemoveDuplicates1(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr.indexOf(arr[i]) != i) {
+                    arr.splice(i, 1);
+                    i--;
+                }
+            }
+            console.log(arr);
+        }
+        function RemoveDuplicates2(arr) {
+            for (var i = 0; i < arr.length - 1; i++) {
+                for (var j = i + 1; j < arr.length; j++) {
+                    if (arr[i] === arr[j]) {
+                        arr.splice(j, 1);
+                        j--;
+                    }
+                }
+            }
+            console.log(arr);
+        }
+        function RemoveDuplicates3(arr) {
+            var temp = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (temp.indexOf(arr[i]) == -1) {
+                    temp.push(arr[i]);
+                }
+            }
+            console.log(temp);
+        }
+        function ChangeColor() {
+            var div = document.getElementById("tast2");
+            if (div) {
+                var generateCode = "<ul>";
+                for (var i = 0; i < 8; i++) {
+                    generateCode += "<li>这是第" + i + "行</li>";
+                }
+                generateCode += "</ul>";
+                div.innerHTML = generateCode;
+                var liElementList = document.getElementsByTagName("li");
+                for (var i = 0; i < liElementList.length; i++) {
+                    liElementList[i].style.background = i % 2 == 0 ? 'orange' : 'gray';
+                }
+            }
+        }
+        function PrintResult() {
+            var User = {
+                count: 1,
+                getCount: function () {
+                    return this.count;
+                }
+            };
+            console.log(User.getCount());
+            console.log("this指向的是函数调用方User，count=1");
+            var func = User.getCount;
+            console.log(func());
+            console.log("this指向的是函数调用方Window，无count");
+            var lenght = 10;
+            function fn() {
+                console.log(this.length);
+            }
+            var obj = {
+                lenght: 5,
+                method: function (fn) {
+                    fn();
+                    arguments[0]();
+                }
+            };
+            obj.method(fn, 1);
+            console.log("第一个fn的this是window？第二次是arguments调用的，lenght就是2");
+        }
+    </script>
+</head>
+
+<body>
+    <input onclick="GenerateCode();" type="button" value="生成验证码" />
+    <input onclick="ChangeColor();" type="button" value="变色" />
+    <div id="tast2"></div>
+    <input onclick="RemoveDuplicates();" type="button" value="去重" />
+    <input onclick="PrintResult();" type="button" value="输出结果" /> 
+</body>
+</html>

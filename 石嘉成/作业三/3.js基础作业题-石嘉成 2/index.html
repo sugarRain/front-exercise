@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/Q1-VertifyCode.js"></script>
+    <script type="text/javascript" src="js/Q2-ChangeColor.js"></script>
+    <script type="text/javascript" src="js/Q3-ArrayUniq.js"></script>
+    <title>Title</title>
+</head>
+<body>
+
+    <div>
+        <h1>1.生成四位数的验证码</h1>
+        <span id="vertifycode" style="background-color: red" onclick="change()">点击切换验证码</span>
+    </div>
+
+    <div>
+        <h1>2.js实现隔行换色</h1>
+        <ul id="ul-container"></ul>
+    </div>
+
+    <div>
+        <h1>3.数组去重</h1>
+        <p>原数组是：[112,112,34,'你好',112,112,34,'你好','str','str1']</p>
+        <input type="button" onclick="uniq()" value="点击获得去重后的数组："/>
+        <ul id="uniqResult"></ul>
+
+
+    </div>
+
+    <div>
+        <h1>4.关于this</h1>
+        <p>1.第一个log输出1，第二个log输出undefined。第一个this.count里面的this代表User这个对象，它是有count这个属性的。
+            第二个func代表着调用的User里面的getCount这个方法，this指的是window，没有count这个属性，所以输出undefined</p>
+        <p>2.没看太懂</p>
+
+    </div>
+</body>
+</html>

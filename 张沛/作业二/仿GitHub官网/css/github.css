@@ -1,0 +1,143 @@
+body{
+	margin:0;
+}
+
+.banner{
+	width: 100%;
+	height: 42vh;
+	background-color: #24292e;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.bak{
+	height: 38vh;
+	margin-top: 1vh;
+	font-size: 0.8em;
+	color: white;
+}
+
+.bak1:hover {
+	transform: scale(1.1,1.1);
+}
+
+.bak2:hover {
+	transform: scale(1.1,1.1);
+}
+
+.bak3:hover {
+	transform: scale(1.1,1.1);
+}
+
+.bak1{
+	width: 300px;
+	background: url(../images/left.jpg) no-repeat;
+	background-size: 100% 100%;
+	transition: transform 0.25s ease;
+}
+
+.bak3{
+	width: 300px;
+	background: url(../images/right.jpg) no-repeat;
+	background-size: 100% 100%;
+	transition: transform 0.25s ease;
+}
+
+.bak1 p,.bak2 p,.bak3 p{
+	margin-top: 25vh;
+	padding-left: 20px;
+	font-size: 1.8em;
+}
+
+.bak1 span,.bak3 span{
+	padding-left: 20px;
+}
+
+.bak2{
+	margin-left: 18px;
+	margin-right: 20px;
+	width: 600px;
+	background-color: green;
+	background: url(../images/center.jpg) no-repeat;
+	background-size: 100% 100%;
+	transition: transform 0.25s ease;
+}
+
+.title{
+	margin-left: 10%;
+}
+
+#container{
+	margin-left:10%;
+	margin-right:10%;
+    display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	overflow-x:scroll;
+	overflow-y:hidden;
+}
+
+#container .intro{
+	width: 18vw;
+	height: 24vh;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px #888888;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	flex-shrink: 0;
+}
+
+#container img{
+	width: 20px;
+	height: 20px;
+}
+
+#container a{
+	text-decoration: none;
+	color: #0366d6;
+	font-family: '宋体';
+	font-size: 1.1em;
+}
+
+#jiangbei{
+	position: relative;
+	top:5px;
+	left:25px;
+	margin-right: 40px;
+}
+
+#love{
+	position: relative;
+	bottom:-30px;
+	right:-210px;
+	margin-right: 0px;
+}
+
+#dianzan{
+	position: relative;
+	bottom: -30px;
+	right: -220px;
+	margin-right: 20px;
+}
+
+#container p{
+	margin: 5px 0 5px 60px;
+	font-size: 1px;
+}
+
+#container::-webkit-scrollbar {
+        width: 10px;    
+        height: 10px;
+    }
+#container::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+         -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: #535353;
+    }
+#container::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        background: #EDEDED;
+    }
