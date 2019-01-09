@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	   <meta charset="UTF-8">
+	   <title>隔行换色</title>
+   </head>
+   <body>
+		<ul id="colorDiv">
+		</ul>
+   </body>
+    <script>
+	 var colorUl=document.getElementById("colorDiv");
+	 for(var i=0;i<7;i++){
+		var node=document.createElement("LI");
+		if(i%2==0){
+			node.style.backgroundColor="#F5A740";
+		}else{
+		     node.style.backgroundColor="#CBCBCB";
+		}
+        var textnode=document.createTextNode('这是第'+i+'行');
+		node.appendChild(textnode);
+		colorUl.appendChild(node);
+	 }
+   </script>
+</html>

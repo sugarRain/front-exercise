@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="UTF-8">
+	   <title>随机四位数</title>
+   </head>
+   <body>
+		<div id="numbers" style="background-color:yellow;width:200px"></div>
+		<button onclick="changeNum()">刷新验证码</button>
+   </body>
+    <script>
+     var numDiv = document.getElementById("numbers");
+     function changeNum(){
+		var code1 = '0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM.';
+		var ch = '';
+		var result = '';
+		for(var i=0;i<4;i++){
+			indexNum = Math.round(Math.random()*62);
+			ch = code1[indexNum];
+			result += ch;
+		}
+	    numDiv.innerHTML = result;
+	}
+   </script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	   <meta charset="UTF-8">
+	   <title>数组去重</title>
+   </head>
+   <body>
+		<div>原数组:3 8 9 5 7 1 2 5 4 6 6</div>
+		<div id="hashremove"></div>
+		<div id="sortremove"></div>
+		<div id="indexremove"></div>
+   </body>
+    <script>
+	    var hashDiv=document.getElementById("hashremove");
+		var sortDiv=document.getElementById("sortremove");
+		var indexDiv=document.getElementById("indexremove");
+		var arr= [4,8,9,5,7,1,2,5,4,5,6];
+        function hashRemove(arr){
+			var hash=[];
+			var hashNum='';
+			  for (var i = 0; i < arr.length; i++) {
+				 if(hash.indexOf(arr[i])==-1){
+				  hash.push(arr[i]);
+				  hashNum=hashNum+arr[i]+' ';
+				 }
+			  }
+			hashDiv.innerHTML = 'hash去重:'+hashNum;
+			return hash;
+		}
+		function sortRemove(arr){
+			arr.sort();
+			var hash=[arr[0]];
+			var sortNum='';
+		    sortNum=sortNum+arr[0]+' ';
+			for (var i = 0; i < arr.length; i++) {
+				 if(arr[i]!=hash[hash.length-1]){
+				 hash.push(arr[i]);
+				 sortNum=sortNum+arr[i]+' ';
+				}
+			 }
+			 sortDiv.innerHTML = 'sort去重:'+sortNum;
+			 return hash;
+		}
+		function indexRemove(arr){
+			  var hash=[];
+			  var indexNum='';
+			  for (var i = 0; i < arr.length; i++) {
+				 if(arr.indexOf(arr[i])==i){
+				  hash.push(arr[i]);
+				  indexNum=indexNum+arr[i]+' ';
+				 }
+			  }
+			  indexDiv.innerHTML = '数组下标去重:'+indexNum;
+			  return hash;
+		}
+		hashRemove(arr);sortRemove(arr);indexRemove(arr);
+   </script>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>0</title>
+</head>
+<body>
+	<ul>
+		<li>第一行</li>
+		<li>地2行</li>
+		<li>第III行</li>
+		<li>第四行</li>
+		<li>第五行</li>
+		<li>第六航</li>
+		<li>第七行</li>
+	</ul>
+
+
+	<span id="nums">
+
+	</span>
+	<button onclick="getRandoms(4)">随机生成</button><br>
+	数组去重,查看控制台
+    1.输出 1 undefined 因为定义的func未指定为方法类型
+	2. 10  2  前一个是fn()绑定到window对象的fn() 后者是arguments对象的成员函数，length未被覆写
+	<script>
+		  /*****************数组驱虫******************************************************/
+		  window.onload= function(){
+            var aa = [1,2,"2",4,9,"a","a",2,"asdasghdj",18,3,5,6,5];
+            console.log("去重之前"+aa)
+            console.log(uniq1(aa))
+            console.log(uniq2(aa))
+            console.log(uniq3(aa))
+        }
+
+    function uniq1(array){
+    var temp = []; //一个新的临时数组
+    for(var i = 0; i < array.length; i++){
+        if(temp.indexOf(array[i]) == -1){
+            temp.push(array[i]);
+        }
+    }
+    return temp;
+    }
+
+
+    function uniq2(array){
+    var temp = {}, r = [], len = array.length, val, type;
+    for (var i = 0; i < len; i++) {
+        val = array[i];
+        type = typeof val;
+        if (!temp[val]) {
+            temp[val] = [type];
+            r.push(val);
+        } else if (temp[val].indexOf(type) < 0) {
+            temp[val].push(type);
+            r.push(val);
+        }
+    }
+    return r;
+    }
+
+    function uniq3(array){
+    var temp = [];
+    for(var i = 0; i < array.length; i++) {
+        //如果当前数组的第i项在当前数组中第一次出现的位置是i，才存入数组；否则代表是重复的
+        if(array.indexOf(array[i]) == i){
+            temp.push(array[i])
+        }
+    }
+    return temp;
+}
+
+
+    /*var User ={
+        count:1,
+        getCount:function(){
+            return this.count;
+        }
+    };
+    console.log(User.getCount());
+    var f=User.getCount;
+    console.log(f())*/
+    /*var length=10;
+    function fn(){
+        console.log(this.length);
+
+    }
+    var obj={
+        length:5,
+        method:function(fn){
+            fn();
+            arguments[0]();
+        }
+    };
+    obj.method(fn,1)*/
+		</script>
+	<script>
+		/*****************颜色******************************************************/
+		let eles=document.getElementsByTagName("li")
+		for(let i=0;i<eles.length;i++){
+			if(i%2===1)
+			eles[i].style.backgroundColor="lightblue"
+		}
+	</script>
+	
+	<script>
+			/*****************随机生成******************************************************/
+		function getRandoms(i){
+			var arr=new Array();
+			for(;i>0;i--){
+				arr.push(getRandom())
+			}
+			document.getElementById("nums").innerText =  arr.join("")
+		}
+		function getRandom(){
+			let rand=Math.floor(Math.random()*52+10+1)
+			let num=0
+			if(rand<26){
+				num = rand+65
+			}else if(rand<52){
+				 num = rand-26+97
+			}else if(rand<62){
+				 num = rand-52+48
+			}else{
+				 num = 46
+			}
+			let c = String.fromCharCode(num)
+			return c
+		}
+
+	</script>
+	
+</body>
+</html>

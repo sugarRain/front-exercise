@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="UTF-8">
+	   <title>关于this</title>
+   </head>
+   <body>
+   <div>(1)输出为:1(调用者为User，范围内的count为1) ;     undefined:(调用者为windows，全局范围内没有count变量所以为undefined)</div>
+   <div>(2)的输出为：10(调用者为Window,Window内的属性length为10) ;  2(调用者为arguments,参数有两个所以长度为2)</div>
+   </body>
+    <script>
+	var User={
+		count:1,
+		getCount:function(){
+			return this.count;
+		}
+	};
+     console.log(User.getCount());
+	 var func=User.getCount;
+	 console.log(func());
+	 var length=10;
+	 function fn(){
+		 console.log(this.length);
+	 }
+	 var Objects={
+		length:5,
+		method:function(fn){
+			fn();
+			arguments[0]();
+		}
+	};
+	Objects.method(fn,1);
+   </script>
+</html>
